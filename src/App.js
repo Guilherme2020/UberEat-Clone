@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 
 import { Header, Card } from './components'
 
@@ -10,14 +10,17 @@ import Styles from './assets/styles';
 class App extends Component {
 
     render() {
-        <View style={Styles.Container}>
-            <Header />
-            <View style={Styles.Content}>
-                <Text>Clone Uber Eats com React Native - Parte 1</Text>
-                <Card />
+        return (
+            <View style={Styles.Container}>
+                <Header />
+                <ScrollView style={Styles.Content}>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </ScrollView>
             </View>
-
-        </View>
+        )
     }
 
 }
